@@ -61,6 +61,9 @@
           <ul class="list-reset">
             <li><a href="#blurb">About the Film</a></li>
             <li><a href="#trailer">Watch the Trailer</a></li>
+            <li><a href="#gallery">Photos</a></li>
+            <li><a href="#press">Press Kit</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </nav>
 
@@ -106,35 +109,145 @@
             </div>
           </section>
 
+          <section id="bios" class="card">
+
+            <article class="bio column">
+              <div class="imageWrapper">
+                <img src="i/davidHess.jpg" />
+              </div>
+              <h1>David Hess</h1>
+              <p>
+                David Hess works mostly with found materials. The materials he finds, he refers to as rescued objects; they are loaded with history and cultural narrative. At Dartmouth College, Hess studied with the realist wood sculptor Fumio Yoshimura, whose precision and humor had a profound impact on Hess. Hess’s interests in science, engineering and narrative filmmaking also inform his sculpture. Frequently, he explores a precarious balance of elements poised on the verge movement. Hess is represented in Baltimore by Goya Contemporary Gallery. His work can be found in numerous private and public collections including the collections of American Visionary Art Museum, Baltimore Museum of Industry, Johns Hopkins Hospital, Sinai Hospital, Thurgood Marshall Airport, Kaiser-Permanente and the Emerson Corporation. In addition, Hess has completed over twenty public art commissions.
+              </p>
+              <p>
+                <a href="http://davidhess.net/">davidhess.net</a>
+              </p>
+            </article>
+
+            <article class="bio column">
+              <div class="imageWrapper">
+                <img src="i/richardChisolm.jpg" />
+              </div>
+              <h1>Richard Chisolm</h1>
+              <p>
+                Richard Chisolm is an Emmy award-winning documentary filmmaker and cinematographer with thirty years of international production experience. He recently directed and shot “Cafeteria Man”, a feature documentary on school food reform currently in national public television distribution. Deeply committed to the value of real stories and the adventures of real people, Richard has worked for PBS, National Geographic, BBC, Discovery Channel, HBO, and many other broadcast entities. He was a camera operator on the HBO series “The Wire” and the director of photography for both of ABC's "Hopkins" prime time medical documentary series (2000 and 2008). He is also the recipient of a Peabody Award, a Columbia duPont Journalism award, two Kodak Vision awards, four CINE Golden Eagles, and is a Distinguished Alumnus of the University of Maryland.
+              </p>
+              <p>
+                <a href="http://www.richardchisolm.com/">www.richardchisolm.com</a>
+              </p>
+            </article>
+
+          </section>
+
+          <section id="gallery" class="card">
+            <!-- Container for the image gallery -->
+            <div class="container">
+
+              <!-- Full-width images with number text -->
+              <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                  <img src="img_woods_wide.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                  <img src="img_5terre_wide.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                  <img src="img_mountains_wide.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                  <img src="img_lights_wide.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                  <img src="img_nature_wide.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                  <img src="img_snow_wide.jpg" style="width:100%">
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!-- Image text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <!-- Thumbnail images -->
+              <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+              </div>
+            </div>
+
+            <script type="text/javascript">
+              var slideIndex = 1;
+              showSlides(slideIndex);
+
+              // Next/previous controls
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+
+              // Thumbnail image controls
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+              }
+            </script>
+
+          </section>
+
+          <section id="faq" class="card">
+            <p>TK</p>
+          </section>
+
         </main>
 
         <footer class="card">
-
-          <article class="bio column">
-            <div class="imageWrapper">
-              <img src="i/davidHess.jpg" />
-            </div>
-            <h1>David Hess</h1>
-            <p>
-              David Hess works mostly with found materials. The materials he finds, he refers to as rescued objects; they are loaded with history and cultural narrative. At Dartmouth College, Hess studied with the realist wood sculptor Fumio Yoshimura, whose precision and humor had a profound impact on Hess. Hess’s interests in science, engineering and narrative filmmaking also inform his sculpture. Frequently, he explores a precarious balance of elements poised on the verge movement. Hess is represented in Baltimore by Goya Contemporary Gallery. His work can be found in numerous private and public collections including the collections of American Visionary Art Museum, Baltimore Museum of Industry, Johns Hopkins Hospital, Sinai Hospital, Thurgood Marshall Airport, Kaiser-Permanente and the Emerson Corporation. In addition, Hess has completed over twenty public art commissions.
-            </p>
-            <p>
-              <a href="http://davidhess.net/">davidhess.net</a>
-            </p>
-          </article>
-
-          <article class="bio column">
-            <div class="imageWrapper">
-              <img src="i/richardChisolm.jpg" />
-            </div>
-            <h1>Richard Chisolm</h1>
-            <p>
-              Richard Chisolm is an Emmy award-winning documentary filmmaker and cinematographer with thirty years of international production experience. He recently directed and shot “Cafeteria Man”, a feature documentary on school food reform currently in national public television distribution. Deeply committed to the value of real stories and the adventures of real people, Richard has worked for PBS, National Geographic, BBC, Discovery Channel, HBO, and many other broadcast entities. He was a camera operator on the HBO series “The Wire” and the director of photography for both of ABC's "Hopkins" prime time medical documentary series (2000 and 2008). He is also the recipient of a Peabody Award, a Columbia duPont Journalism award, two Kodak Vision awards, four CINE Golden Eagles, and is a Distinguished Alumnus of the University of Maryland.
-            </p>
-            <p>
-              <a href="http://www.richardchisolm.com/">www.richardchisolm.com</a>
-            </p>
-          </article>
 
           <div class="column">
             <p>Anything else?</p>

@@ -113,15 +113,16 @@ footer {
   display: flex;
 }
 
-footer .column {
+footer .column,
+#bios .column {
   padding: 2rem;
   flex: 1;
 }
 
-footer .column.bio {
+footer .column.bio,
+#bios .column.bio {
   flex: 2;
 }
-
 
 main,
 .card {
