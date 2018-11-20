@@ -110,7 +110,6 @@ body {
 header {
   background-color: rgba(9,29,39,1);
   color: rgba(254,243,232,1);
-  height: 10em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,8 +117,9 @@ header {
   text-align: center;
 }
 
+header { width: 100%; }
 header .logotype {
-  width: 80%;
+  width: 75%;
   height: auto;
 }
 
