@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   color: rgba(9,29,39,1);
   font-family: Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 html *,
@@ -40,6 +41,9 @@ body {
 }
 
 @media (max-width: 50em) {
+  header .logotype {
+    margin: .5em .2em 0 .2em;
+  }
   header nav {
     width: 100%;
     margin-top: .75em;
@@ -96,7 +100,6 @@ body {
 header {
   background-color: rgba(9,29,39,1);
   color: rgba(254,243,232,1);
-  padding: .1em;
   height: 10em;
   display: flex;
   flex-direction: column;
@@ -112,6 +115,10 @@ header .logotype {
 
 header .logotype .st0 {
   fill: rgba(254,243,232,1);
+}
+
+@@media (min-width: 50em) {
+  header { padding: .1em; }
 }
 
 .wide-wrap {
@@ -192,7 +199,14 @@ main,
 
 main,
 #poster {
-  min-height: 100vh;
+  min-height: 75vh;
+}
+
+@media (min-width: 50em) {
+  main,
+  #poster {
+    min-height: 100vh;
+  }
 }
 
 .wide-wrap,
@@ -217,7 +231,8 @@ main {
 }
 
 #poster section.flexed {
-  margin: 1rem;
+  margin: 0;
+  padding: 0 1rem;
   font-family: 'League Gothic', sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
@@ -236,40 +251,68 @@ section.flexed.quote {
 section.quote, section.documentary {
   width: 100%;
 }
+.placeholder { display: none;}
+
+section.quote p {
+  line-height: 90%;
+  margin-top: .1rem;
+  font-size: 2em;
+  padding-top: 0;
+}
+
 @media (min-width: 40rem) {
+  #poster section.flexed {
+    margin: 1rem;
+  }
   #poster > div.flexed {
     flex-direction: row;
     justify-content: space-between;
   }
   section.quote, section.documentary {
-    width: 30%;
+    width: 50%;
   }
 }
 
-section.quote p, section.documentary p {
-  font-size: 1.5em;
-}
-section.quote p, section.documentary .name {
-  line-height: 2.75rem;
-}
-
-section.quote {
-  margin-right: 10%;
-}
-
-section.quote p {
-  line-height: 90%;
-  margin-top: 1rem;
-  font-size: 3em;
-  padding-top: 0;
+@media (min-width: 50em) {
+  section.quote p, section.documentary p {
+    font-size: 1.5em;
+  }
+  section.quote p, section.documentary .name {
+    line-height: 2.75rem;
+  }
+  section.quote p {
+    margin-top: 1rem;
+    font-size: 3em;
+  }
 }
 
 @media (min-width: 1020px) {
+  section.quote, section.documentary {
+    width: 30%;
+  }
+  .placeholder { display: block;}
+  section.quote {
+    margin-right: 10%;
+  }
   #poster section.credits { width: 75%; }
 }
 section.credits > p {
   color: rgba(254,243,232,1);
   text-shadow: 0 0 10px rgba(9,29,39,1);
+}
+
+@media (max-width: 50em) {
+  section.credits,
+  section.credits p,
+  section.credits p .name {
+    font-size: .6rem !important;
+    font-family: helvetica !important;
+    line-height: 1rem !important;
+  }
+  section.credits p .name {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+  }
 }
 
 #blurb {
@@ -279,10 +322,19 @@ section.credits > p {
   color: rgba(254,243,232,1);
 }
 #blurb p {
-  max-width: 30em;
-  padding: 3rem;
-  font-size: 1.5rem;
+  padding: 2rem;
+  font-size: 1.2rem;
   margin: 0;
+  text-align: center;
+}
+@media (min-width: 50em) {
+  #blurb p {
+    max-width: 30em;
+    padding: 3rem;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: left;
+  }
 }
 @media (min-width: 960px) {
   #blurb p {
