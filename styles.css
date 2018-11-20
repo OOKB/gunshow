@@ -119,8 +119,8 @@ header {
 }
 
 header .logotype {
-  height: 80%;
-  width: auto;
+  width: 80%;
+  height: auto;
 }
 
 header .logotype .st0 {
@@ -153,6 +153,10 @@ header .logotype .st0 {
   }
   .wide-wrap {
     margin-left: 15em;
+  }
+  header .logotype {
+    height: 80%;
+    width: auto;
   }
 }
 
