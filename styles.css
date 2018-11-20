@@ -213,14 +213,7 @@ main,
 
 main,
 #poster {
-  min-height: 75vh;
-}
-
-@media (min-width: 50em) {
-  main,
-  #poster {
-    min-height: 100vh;
-  }
+  min-height: 100vh;
 }
 
 .wide-wrap,
