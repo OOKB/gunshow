@@ -128,7 +128,7 @@ header .logotype .st0 {
 }
 
 @@media (min-width: 50em) {
-  header { padding: .1em; }
+  header { padding: .1em; height: 10em }
 }
 
 .wide-wrap {
