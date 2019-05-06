@@ -289,6 +289,11 @@ section.quote p {
   padding-top: 0;
 }
 
+section.quote img.mdffWreath {
+  width: 200px;
+  margin-top: -2.25em;
+}
+
 @media (min-width: 40rem) {
   #poster section.flexed {
     margin: 1rem;
@@ -299,6 +304,10 @@ section.quote p {
   }
   section.quote, section.documentary {
     width: 50%;
+  }
+  section.quote img.mdffWreath {
+    width: 100%;
+    margin-top: 0;
   }
 }
 
@@ -363,19 +372,46 @@ section.credits > p {
   font-size: 1.2rem;
   margin: 0;
 }
+
+#blurb blockquote {
+  padding: 0;
+  margin: 1.5rem auto;
+  max-width: 80%;
+  font-style: italic;
+  text-align: center;
+  color: rgba(218,234,242,1);
+}
+#blurb blockquote .byline {
+  font-size: 80%;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: .5em;
+  color: rgba(254,243,232,1);
+}
+
 @media (min-width: 50em) {
   #blurb {
     padding: 3rem;
     text-align: left;
+    justify-content: flex-start;
   }
   #blurb h2 {
     max-width: 30em;
     font-size: 3rem;
+    text-align: left;
+    margin: 0 0 .5rem 0;
   }
   #blurb p {
     max-width: 30em;
     font-size: 1.5rem;
     margin: 0 0 1em 0;
+  }
+  #blurb blockquote {
+    font-size: 1.25rem;
+  }
+  #blurb blockquote .byline {
+    font-size: 75%;
   }
 }
 @media (min-width: 960px) {
@@ -384,12 +420,18 @@ section.credits > p {
   }
   #blurb h2 {
     font-size: 4vw;
-    width: 100%;
     text-align: left;
+    align-items: flex-start;
   }
   #blurb p {
     font-size: 2.25vw;
     margin-bottom: .5em;
+  }
+  #blurb blockquote {
+    font-size: 2vw;
+  }
+  #blurb blockquote .byline {
+    font-size: 66%;
   }
 }
 
