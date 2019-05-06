@@ -349,26 +349,47 @@ section.credits > p {
   justify-content: center;
   background-color: rgba(9,29,39,1);
   color: rgba(254,243,232,1);
-}
-#blurb p {
+  flex-direction: column;
   padding: 2rem;
-  font-size: 1.2rem;
-  margin: 0;
   text-align: center;
 }
+#blurb h2 {
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-size: 175%;
+  margin-bottom: 0;
+}
+#blurb p {
+  font-size: 1.2rem;
+  margin: 0;
+}
 @media (min-width: 50em) {
+  #blurb {
+    padding: 3rem;
+    text-align: left;
+  }
+  #blurb h2 {
+    max-width: 30em;
+    font-size: 3rem;
+  }
   #blurb p {
     max-width: 30em;
-    padding: 3rem;
     font-size: 1.5rem;
-    margin: 0;
-    text-align: left;
+    margin: 0 0 1em 0;
   }
 }
 @media (min-width: 960px) {
-  #blurb p {
+  #blurb {
     padding: 8rem 4rem;
+  }
+  #blurb h2 {
+    font-size: 4vw;
+    width: 100%;
+    text-align: left;
+  }
+  #blurb p {
     font-size: 2.25vw;
+    margin-bottom: .5em;
   }
 }
 
