@@ -367,6 +367,13 @@ section.credits > p {
   text-transform: uppercase;
   font-size: 175%;
   margin-bottom: 0;
+  color: #fa002b;
+  line-height: 1;
+  text-align: center;
+}
+#blurb h2 > span {
+  font-size: 200%;
+  line-height: .75;
 }
 #blurb p {
   font-size: 1.2rem;
@@ -399,7 +406,7 @@ section.credits > p {
   #blurb h2 {
     max-width: 30em;
     font-size: 3rem;
-    text-align: left;
+    text-align: center;
     margin: 0 0 .5rem 0;
   }
   #blurb p {
@@ -420,8 +427,9 @@ section.credits > p {
   }
   #blurb h2 {
     font-size: 4vw;
-    text-align: left;
     align-items: flex-start;
+    margin-bottom: 1em;
+    justify-content: flex-start;
   }
   #blurb p {
     font-size: 2.25vw;
