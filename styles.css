@@ -22,6 +22,10 @@ img {
   max-width: 100%;
 }
 
+.flexed {
+  display: flex;
+}
+
 body {
   margin: 0;
 }
@@ -248,20 +252,12 @@ main {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
 }
 
-#poster > div.flexed {
-  display: flex;
-  flex-direction: column;
-}
-
 #poster section.flexed {
-  margin: 0;
-  padding: 0 1rem;
   font-family: 'League Gothic', sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
@@ -272,27 +268,23 @@ main {
 }
 
 section.flexed .name,
-section.flexed.quote {
+section.flexed.laurels {
   font-size: 2em;
   line-height: 1.75rem;
 }
 
-section.quote, section.documentary {
+section.laurels,
+section.documentary {
   width: 100%;
 }
 .placeholder { display: none;}
 
-section.quote p {
-  line-height: 90%;
-  margin-top: .1rem;
-  font-size: 2em;
-  padding-top: 0;
+section.laurels img.wreath {
+  width: auto;
+  display: block;
+  height: 8vw;
 }
 
-section.quote img.mdffWreath {
-  width: 200px;
-  margin-top: -2.25em;
-}
 
 @media (min-width: 40rem) {
   #poster section.flexed {
@@ -302,34 +294,30 @@ section.quote img.mdffWreath {
     flex-direction: row;
     justify-content: space-between;
   }
-  section.quote, section.documentary {
+  section.laurels, section.documentary {
     width: 50%;
-  }
-  section.quote img.mdffWreath {
-    width: 100%;
-    margin-top: 0;
   }
 }
 
 @media (min-width: 50em) {
-  section.quote p, section.documentary p {
+  section.laurels p, section.documentary p {
     font-size: 1.5em;
   }
-  section.quote p, section.documentary .name {
+  section.laurels p, section.documentary .name {
     line-height: 2.75rem;
   }
-  section.quote p {
+  section.laurels p {
     margin-top: 1rem;
     font-size: 3em;
   }
 }
 
 @media (min-width: 1020px) {
-  section.quote, section.documentary {
+  section.laurels, section.documentary {
     width: 30%;
   }
   .placeholder { display: block;}
-  section.quote {
+  section.laurels {
     margin-right: 10%;
   }
   #poster section.credits { width: 75%; }
