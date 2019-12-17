@@ -26,6 +26,7 @@ body * {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .flexed {
@@ -245,7 +246,8 @@ main,
 }
 
 .wide-wrap,
-main {
+main,
+#poster {
   flex-direction: column;
 }
 
@@ -256,7 +258,8 @@ main {
   background-size: cover;
   flex-direction: column;
   text-align: center;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
 #poster section.flexed {
@@ -287,6 +290,31 @@ section.laurels img.wreath {
   height: 8vw;
 }
 
+.card,
+.laurels {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.laurels {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+}
+
+.laurels .wreath {
+  flex: 1 1 150px;
+  padding: .5em;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.laurels .wreath img {
+  width: auto;
+  max-height: 90px;
+  margin: auto;
+}
 
 @media (min-width: 40rem) {
   #poster section.flexed {
