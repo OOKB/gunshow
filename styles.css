@@ -3,6 +3,8 @@
   box-sizing: inherit
 }
 
+html {box-sizing: border-box;}
+
 html,
 body {
   height: 100%;
@@ -11,6 +13,10 @@ body {
   color: rgba(9,29,39,1);
   font-family: Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
 }
 
 html *,
@@ -26,9 +32,7 @@ img {
   display: flex;
 }
 
-body {
-  margin: 0;
-}
+.small {font-size: 80%;}
 
 a { color: rgba(9,29,39,1); }
 a:link {color: inherit;}
@@ -40,8 +44,6 @@ header nav a:link {color: inherit;}
 header nav a:visited {color: rgba(254,243,232,1);}
 header nav a:hover {color: rgba(254,243,232,.75);}
 header nav a:active {color: rgba(254,243,232,.5));}
-
-.small {font-size: 80%;}
 
 /* all purpose */
 .hidden, .hidden-sm { display: none; }
