@@ -148,10 +148,6 @@ header .logotype .st0 {
   fill: rgba(254,243,232,1);
 }
 
-@@media (min-width: 50em) {
-  header { padding: .1em; height: 10em }
-}
-
 .wide-wrap {
   display: flex;
   background-color: rgba(254,243,232,1);
@@ -240,8 +236,7 @@ main,
   display: flex;
 }
 
-main,
-#poster {
+main {
   min-height: 100vh;
 }
 
@@ -252,6 +247,8 @@ main,
 }
 
 #poster {
+  min-height: calc(100vh + 100px);
+
   background-image: url('gunShowMainPage.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -308,7 +305,24 @@ section.documentary {
   margin: auto;
 }
 
+.documentary {
+  justify-content: flex-end;
+  padding: 0 17%;
+  height: 15rem;
+}
+
+@media (min-width: 45em) {
+  .documentary {
+    padding: 0 25%;
+    height: 17rem;
+  }
+}
+
 @media (min-width: 50em) {
+  .documentary {
+    padding: 0 12%;
+    height: 12rem;
+  }
   section.documentary p {
     font-size: 1.5em;
   }
@@ -316,7 +330,12 @@ section.documentary {
     line-height: 2.75rem;
   }
 }
-
+@media (min-width: 70em) {
+  .documentary {
+    padding: 0 25%;
+    height: 12rem;
+  }
+}
 @media (min-width: 1020px) {
   .placeholder { display: block;}
   #poster section.credits { width: 75%; }
