@@ -291,19 +291,20 @@ section.documentary {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-height: 150px;
+  margin-top: 1rem;
+  max-height: 100px;
 }
 
 .laurels .wreath {
-  flex: 1 1 150px;
-  padding: .5em;
-  min-width: 100px;
-  max-width: 200px;
+  flex: 1 1 auto;
+  padding: .25rem .5rem;
+  min-width: 50px;
+  max-width: 150px;
 }
 
 .laurels .wreath img {
   width: auto;
-  max-height: 90px;
+  max-height: 80px;
   margin: auto;
 }
 
@@ -317,9 +318,6 @@ section.documentary {
 }
 
 @media (min-width: 1020px) {
-  section.documentary {
-    width: 30%;
-  }
   .placeholder { display: block;}
   #poster section.credits { width: 75%; }
 }
