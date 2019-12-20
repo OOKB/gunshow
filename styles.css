@@ -173,6 +173,7 @@ header .logotype .st0 {
   }
   header .logotype {
     height: 80%;
+    max-height: 700px;
     width: auto;
   }
 }
@@ -247,8 +248,9 @@ main,
 }
 
 #poster {
+  /*make it tall enough on small screens*/
   min-height: calc(100vh + 100px);
-
+  /* deisgn it up */
   background-image: url('gunShowMainPage.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -273,17 +275,13 @@ section.flexed.laurels {
   line-height: 1.75rem;
 }
 
-section.laurels,
-section.documentary {
-  width: 100%;
-}
-
 .card,
 .laurels {
   width: 100%;
   flex-grow: 1;
 }
 
+/* trying to get those damn laurels to always show up nicely */
 .laurels {
   align-items: center;
   justify-content: center;
@@ -296,33 +294,91 @@ section.documentary {
   flex: 1 1 auto;
   padding: .25rem .5rem;
   min-width: 50px;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 .laurels .wreath img {
   width: auto;
-  max-height: 80px;
+  max-height: 50px;
   margin: auto;
 }
 
+@media (min-width: 30em) {
+  .laurels .wreath {
+    min-width: 80px;
+    max-width: 120px;
+  }
+  .laurels .wreath img {
+    max-height: 60px;
+  }
+}
+
+@media (min-width: 33em) {
+  .laurels .wreath {
+    min-width: 90px;
+  }
+  .laurels .wreath img {
+    max-height: 65px;
+  }
+}
+
+@media (min-width: 35em) {
+  .laurels .wreath {
+    max-width: 140px;
+  }
+  .laurels .wreath img {
+    max-height: 70px;
+  }
+}
+
+@media (min-width: 39em) {
+  .laurels .wreath {
+    min-width: 33%;
+    max-width: 250px;
+  }
+  .laurels .wreath img {
+    max-height: 75px;
+  }
+}
+
+@media (min-width: 69em) {
+  .laurels .wreath {
+    min-width: 15%;
+    max-width: 16%;
+  }
+  .laurels .wreath img {
+    max-height: 90px;
+  }
+}
+
+@media (min-width: 98em) {
+  .laurels {
+    max-height: 200px;
+  }
+  .laurels .wreath {
+    padding: 1rem;
+  }
+  .laurels .wreath img {
+    width: auto;
+    max-height: 120px;
+    margin: auto;
+  }
+}
+
+/* Richard's name placement at different ratios, etc. */
 .documentary {
-  justify-content: flex-end;
-  padding: 0 17%;
-  height: 15rem;
+  align-self: flex-end;
+  margin-right: 5%;
+  margin-bottom: 20%;
 }
 
 @media (min-width: 45em) {
   .documentary {
-    padding: 0 25%;
-    height: 17rem;
+    margin-right: 20%;
   }
 }
 
 @media (min-width: 50em) {
-  .documentary {
-    padding: 0 12%;
-    height: 12rem;
-  }
   section.documentary p {
     font-size: 1.5em;
   }
@@ -330,17 +386,10 @@ section.documentary {
     line-height: 2.75rem;
   }
 }
-@media (min-width: 70em) {
-  .documentary {
-    padding: 0 25%;
-    height: 12rem;
-  }
-}
-@media (min-width: 1020px) {
-  .placeholder { display: block;}
-  #poster section.credits { width: 75%; }
-}
-section.credits > p {
+
+/* bottom collection of names **/
+.credits { max-width: 90%; }
+.credits > p {
   color: rgba(254,243,232,1);
   text-shadow: 0 0 10px rgba(9,29,39,1);
 }
@@ -360,7 +409,6 @@ section.credits > p {
 }
 
 /* Blurb CSS, Card/Panel 2 */
-
 #blurb {
   align-items: center;
   justify-content: center;
