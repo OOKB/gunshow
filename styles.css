@@ -35,6 +35,12 @@ img {
 
 .small {font-size: 80%;}
 
+ul.no-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 a { color: rgba(9,29,39,1); }
 a:link {color: inherit;}
 a:visited {color: rgba(58,74,82,.8);}
@@ -418,7 +424,8 @@ section.flexed.laurels {
   padding: 2rem;
   text-align: center;
 }
-#blurb h2 {
+#blurb h2,
+#reviews h2 {
   font-family: 'League Gothic', sans-serif;
   text-transform: uppercase;
   font-size: 175%;
@@ -473,7 +480,8 @@ section.flexed.laurels {
     text-align: left;
     justify-content: flex-start;
   }
-  #blurb h2 {
+  #blurb h2,
+  #reviews h2 {
     max-width: 30em;
     font-size: 3rem;
     text-align: center;
@@ -506,7 +514,8 @@ section.flexed.laurels {
   #blurb {
     padding: 8rem 4rem;
   }
-  #blurb h2 {
+  #blurb h2,
+  #reviews h2 {
     font-size: 4vw;
     align-items: flex-start;
     margin-bottom: 1em;
@@ -551,3 +560,35 @@ section.flexed.laurels {
 }
 
 /* Adding some review links */
+
+#reviews {
+  background-color: #fa002b;
+  color: rgba(254,243,232,1);
+  font-size: 2em;
+  margin-top: -26px;
+  padding: 2em 2em 4em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+#reviews h2 {
+  color: rgba(254,243,232,1);
+  margin-bottom: .25em;
+}
+#reviews > ul {
+  margin: auto;
+}
+
+#reviews > ul li {
+  border-bottom: 1px solid rgba(254,243,232,1);
+}
+#reviews > ul li:first-of-type {
+  border-top: 1px solid rgba(254,243,232,1);
+}
+
+#reviews > ul li a {
+  color:  rgba(254,243,232,1);
+}
+
+#reviews > ul li a:hover {
+  color:  rgba(254,243,232,.5);
+}
